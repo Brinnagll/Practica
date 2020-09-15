@@ -17,12 +17,14 @@ namespace APIGorena.Controllers
         private DataContext db = new DataContext();
 
         // GET: api/Gorenas
+        [Authorize]
         public IQueryable<Gorena> GetGorenas()
         {
             return db.Gorenas;
         }
 
         // GET: api/Gorenas/5
+        [Authorize]
         [ResponseType(typeof(Gorena))]
         public IHttpActionResult GetGorena(int id)
         {
@@ -36,6 +38,7 @@ namespace APIGorena.Controllers
         }
 
         // PUT: api/Gorenas/5
+        [Authorize]
         [ResponseType(typeof(void))]
         public IHttpActionResult PutGorena(int id, Gorena gorena)
         {
@@ -71,6 +74,7 @@ namespace APIGorena.Controllers
         }
 
         // POST: api/Gorenas
+        [Authorize]
         [ResponseType(typeof(Gorena))]
         public IHttpActionResult PostGorena(Gorena gorena)
         {
@@ -86,6 +90,7 @@ namespace APIGorena.Controllers
         }
 
         // DELETE: api/Gorenas/5
+        [Authorize]
         [ResponseType(typeof(Gorena))]
         public IHttpActionResult DeleteGorena(int id)
         {

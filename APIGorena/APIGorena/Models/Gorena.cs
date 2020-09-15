@@ -4,7 +4,7 @@
     using System.ComponentModel;
     using System.ComponentModel.DataAnnotations;
 
-    public enum Place
+    public enum typeplace
     {
         Registro1 = 10,
         Registro2 = 20,
@@ -22,7 +22,7 @@
         public string FriendOfGorena { get; set; }
 
         [Required(ErrorMessage = "Debe ingresar el nombre del producto")]
-        public string Place { get; set; }
+        public typeplace Place { get; set; }
 
         [EmailAddress]
         public string Email { get; set; }
