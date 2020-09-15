@@ -9,5 +9,7 @@ namespace APIGorena.Models
         {
 
         }
+
+        public System.Data.Entity.DbSet<APIGorena.Models.Gorena> Gorenas { get; set; }
     }
 }
